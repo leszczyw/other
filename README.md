@@ -2,20 +2,20 @@
 
 # Convert to csv from Excel file in Python
 
-import xlrd
-import csv
-import unicodecsv
-
-wb = xlrd.open_workbook('input_file.xlsx')
-sh = wb.sheet_by_index(0)
-
-fh = open('output_file.csv',"wb")
-csv_out = unicodecsv.writer(fh, encoding='utf-8-sig', lineterminator='\n', quotechar = '"', quoting=csv.QUOTE_NONNUMERIC)
-
-for row_number in range (sh.nrows):
-    csv_out.writerow(sh.row_values(row_number))
-
-fh.close()
+	import xlrd
+	import csv
+	import unicodecsv
+	
+	wb = xlrd.open_workbook('input_file.xlsx')
+	sh = wb.sheet_by_index(0)
+	
+	fh = open('output_file.csv',"wb")
+	csv_out = unicodecsv.writer(fh, encoding='utf-8-sig', lineterminator='\n', quotechar = '"', quoting=csv.QUOTE_NONNUMERIC)
+	
+	for row_number in range (sh.nrows):
+	    csv_out.writerow(sh.row_values(row_number))
+	
+	fh.close()
 
 text = open("output_file", "r", encoding='utf8')
 text = ''.join([i for i in text]).replace(".0", "")
