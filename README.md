@@ -1,6 +1,6 @@
-## Others
+##### Different hints & tips for: Python, and SQL
 
-# Convert the Excel file into CSV format using Python code
+###### Convert the Excel file into CSV format using Python code
 
 	import xlrd
 	import csv
@@ -24,11 +24,11 @@
 	x.writelines(text)
 	x.close()
 
-# Change the column type in PostgreSQL database
+###### Change the column type in PostgreSQL database
 
 	ALTER TABLE table_name ALTER COLUMN column_name SET DATA TYPE timestamp USING column_name::timestamp without time zone
 
-# Connector between MSSQL and PostgreSQL databases
+###### Connector between MSSQL and PostgreSQL databases
 
 	import pymssql, psycopg2, sys
 	
@@ -81,7 +81,7 @@
 	        a.close_cur()
 	        a.close_conn()
         
-# Connector between IBM Informix and PostgreSQL databases
+###### Connector between IBM Informix and PostgreSQL databases
 
 	import sys
 	import logging
